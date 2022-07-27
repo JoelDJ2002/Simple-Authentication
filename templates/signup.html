@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {%load static%}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/signin-up.css' %}"
+    />
+    <title>{%block title%} {%endblock title%} Autentication System</title>
+  </head>
+
+  <body>
+    {% if messages %}
+    <div class="header">
+      {% for message in messages %}
+      <div
+        class="alert alert-{{ message.tags }} alert-dismissible fade show my-0"
+        role="alert"
+      >
+        <strong> {{ message }} </strong>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {%block body%}
+
+    <div class="container" id="container">
+      <div class="form-container sign-in-container">
+        <form action="/signup" method="post">
+          {% csrf_token %}
+          <h1>Create Account</h1>
+
+          <span>Use your email for registration</span>
+          <input
+            type="text"
+            placeholder="Userame"
+            name="username"
+            id="username"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Full Name"
+            name="fname"
+            id="fname"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="pass1"
+            id="pass1"
+            required
+          />
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <h1>Already have an account?</h1>
+            <p>
+              What are you waiting for ??
+              <br />
+              Click here to Sign In
+            </p>
+            <a class="ghost" id="signUpbtn" href="/signin" class="btn btn-lg">
+              Sign In
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      #signUpbtn {
+        border: 1px solid white;
+        padding: 7px 21px;
+        color: white;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+      .header {
+        margin-top: 0%;
+        color: #fe0b0b;
+        padding: 1%;
+        background-color: #f1c1c1;
+        margin-bottom: 2%;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </body>
+  {%endblock body%}
+</html>

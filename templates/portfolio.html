@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    {%load static%}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  {%block body%}
+  <body>
+    <div class="hero">
+      <nav>
+        <h2 class="logo">
+          porte<span>feuille</span> (portofolio written in french just to show
+          off)
+        </h2>
+      </nav>
+
+      <div class="content">
+        <h4>Hellu...I'm</h4>
+        <h1>Joel <span>D Joy</span></h1>
+        <h3>Web Developer (somehow).</h3>
+      </div>
+    </div>
+
+    <section class="about">
+      <div class="main">
+        <img src="{% static 'img/backgrpund1.jpg' %}" />
+        <div class="about-text">
+          <h2>About Me</h2>
+          <h5>Developer <span>& Designer</span> (Somehow...even IDK)</h5>
+          <p>
+            I am a front-end web developer (Somehow...even IDK). I can provide
+            clean code and pixel perfect design by copy pasting from the
+            internet and changing its color and theme. I even copied this
+            Portfolio Templete. I'm lazy....what to do. “Laziness is nothing
+            more than the habit of resting before you get tired.” — Jules Renard
+            (Idk who he is)
+          </p>
+        </div>
+      </div>
+      <h5 id="photo-desc">
+        Me in 2nd year of college.<br />
+        Idk why I look like an addict in here.
+      </h5>
+    </section>
+
+    <div class="service">
+      <div class="title">
+        <h2>Skills...What to do</h2>
+      </div>
+
+      <div class="box">
+        <div class="card">
+          <h5>Annoy You</h5>
+          <div class="pra">
+            <p>I can get on your nerves and annoy the hell out of you.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5>Waste your time</h5>
+          <div class="pra">
+            <p>
+              I can talk shit for hours and you won't even know when time passed
+              by.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h5>Web Development</h5>
+          <div class="pra">
+            <p>
+              I'm lazy so somehow good at copy pasting & changing colors and
+              themes turns out to be easy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Joel D Joy</p>
+      <p>I'm Jobless</p>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <h6>
+        If you're wondering what the hell is that background photo on the top
+      </h6>
+      <h6>
+        I didn't find any good photo of mine so I put picture of my name in
+        hebrew language...kinda looked cool
+      </h6>
+    </footer>
+  </body>
+  {%endblock body%}
+</html>

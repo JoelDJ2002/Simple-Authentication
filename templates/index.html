@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {%load static%}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    <title>{%block title%} {%endblock title%}Document</title>
+  </head>
+
+  {%block body%}
+
+  <body>
+    <main class="main">
+      <!-- Header -->
+      <header class="header">
+        <div class="container flex-between">
+          <div class="burger-menu">
+            <i class="fa-regular fa-bars icon"></i>
+          </div>
+        </div>
+      </header>
+      <!-- Landing -->
+      <section class="landing">
+        <div class="landing-text">
+          <h1>Welcome to Authentify</h1>
+          <p>A Sample Authentication Project</p>
+          <a href="/signup" class="btn btn-lg">Get Started</a>
+        </div>
+        <div class="landing-image">
+          <img
+            src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/illustration-working.svg"
+            alt="Working Illustration"
+          />
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer" id="resources">
+        <div class="attribution">
+          About Me -
+          <a href="/about"><span class="outer-link">Joel D Joy</span> </a>
+        </div>
+      </footer>
+    </main>
+  </body>
+  {%endblock body%}
+</html>
